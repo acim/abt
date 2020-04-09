@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/acim/tools/pkg/aws"
+	"github.com/acim/abt/pkg/aws"
 	"github.com/spf13/cobra"
 )
 

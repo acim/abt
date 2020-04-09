@@ -1,7 +1,7 @@
 package aws
 
 import (
-	"github.com/acim/tools/pkg/strings"
+	"github.com/acim/abt/pkg/strings"
 )
 
 const (

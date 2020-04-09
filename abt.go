@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/acim/tools/cmd"
+	"github.com/acim/abt/cmd"
 )
 
 func main() {
