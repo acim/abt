@@ -1,8 +1,8 @@
 module github.com/acim/abt
 
-go 1.14
+go 1.15
 
 require (
-	github.com/spf13/cobra v0.0.7
-	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/spf13/cobra v1.0.0
+	mvdan.cc/gofumpt v0.0.0-20200802201014-ab5a8192947d // indirect
 )

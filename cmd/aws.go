@@ -22,6 +22,7 @@ var awsGenKeysCmd = &cobra.Command{
 		}
 		fmt.Println("Access key:", ak)
 		fmt.Println("Secret access key:", sak)
+
 		return nil
 	},
 }
