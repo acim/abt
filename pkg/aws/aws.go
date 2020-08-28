@@ -15,9 +15,11 @@ func GenerateKeys() (accessKey string, secretAccessKey string, err error) {
 	if err != nil {
 		return "", "", err
 	}
+
 	sak, err := strings.Random(secretAccessKeyChars, 40)
 	if err != nil {
 		return "", "", err
 	}
+
 	return ak, sak, nil
 }

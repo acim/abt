@@ -5,6 +5,8 @@ import (
 	"errors"
 )
 
+var errFailedGeneratingRandomBytes = errors.New("unable to generate random bytes")
+
 // Random generates random string of provided character set and length.
 func Random(availableChars string, length int) (string, error) {
 	availableCharLength := len(availableChars)
@@ -48,10 +50,8 @@ func Random(availableChars string, length int) (string, error) {
 
 func randomBytes(length int) ([]byte, error) {
 	rb := make([]byte, length)
-	_, err := rand.Read(rb)
-
-	if err != nil {
-		return nil, errors.New("unable to generate random bytes")
+	if _, err := rand.Read(rb); err != nil {
+		return nil, errFailedGeneratingRandomBytes
 	}
 
 	return rb, nil
