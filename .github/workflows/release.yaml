@@ -1,3 +1,5 @@
+name: release
+
 on:
   release:
     types: [created]
@@ -10,29 +12,6 @@ env:
   CGO_ENABLED: 0
 
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up go
-        uses: actions/setup-go@v2
-        with:
-          go-version: ^1.15
-      - name: Set up cache
-        uses: actions/cache@v2
-        with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
-      - name: Set up linters
-        run: |
-          GO111MODULE=on go get github.com/golangci/golangci-lint/cmd/golangci-lint
-          go get -u golang.org/x/lint/golint
-      - name: Check out
-        uses: actions/checkout@v2
-      - name: Lint
-        run: |
-          make lint
   releases-matrix:
     runs-on: ubuntu-latest
     strategy:
