@@ -9,7 +9,7 @@ In the future there may be more tools.
 
 ## Install
 
-`GO111MODULE=on go get github.com/acim/abt/cmd/abt`
+`go get -u github.com/acim/abt/cmd/abt`
 
 ## Run
 
