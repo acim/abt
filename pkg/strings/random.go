@@ -25,7 +25,7 @@ func Random(availableChars string, length int) (string, error) {
 
 	bitMask = 1<<bitLength - 1
 
-	bufferSize := length + length/3
+	bufferSize := length + length/3 //nolint:gomnd
 
 	var err error
 
