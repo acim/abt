@@ -9,7 +9,7 @@ In the future there may be more tools.
 
 ## Install
 
-go get -u github.com/acim/cmd/abt
+go get -u github.com/acim/abt/cmd/abt
 
 ## Run
 
