@@ -5,6 +5,7 @@ on:
 
 env:
   CMD_PATH: ./cmd/abt
+  BINARY_NAME: abt
   GO_VERSION: 1.15.8
   CGO_ENABLED: 0
 
@@ -35,4 +36,4 @@ jobs:
           project_path: '${{ env.CMD_PATH }}'
           ldflags: -s -w
           build_flags: -a -installsuffix cgo
-          binary_name: 'abt'
+          binary_name: '${{ env.BINARY_NAME }}'
