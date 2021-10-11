@@ -8,7 +8,7 @@ on:
 env:
   CMD_PATH: ./cmd/abt
   BINARY_NAME: abt
-  GO_VERSION: 1.15.8
+  GO_VERSION: 1.17.2
   CGO_ENABLED: 0
 
 jobs:
@@ -17,16 +17,7 @@ jobs:
     strategy:
       matrix:
         goos: [linux, windows, darwin]
-        goarch: ['386', arm64, amd64]
-        exclude:
-          - goarch: '386'
-            goos: windows
-          - goarch: '386'
-            goos: darwin
-          - goarch: arm64
-            goos: windows
-          - goarch: arm64
-            goos: darwin
+        goarch: [arm64, amd64]
     steps:
       - uses: actions/checkout@v2.3.4
       - uses: wangyoucao577/go-release-action@v1.20
