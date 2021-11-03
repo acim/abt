@@ -31,7 +31,7 @@ func Random(availableChars string, length int) (string, error) {
 
 	result := make([]byte, length)
 
-	for i, j, rb := 0, 0, []byte{}; i < length; j++ {
+	for i, j, rb := 0, 0, []byte{}; i < length; j++ { //nolint:varnamelen
 		if j%bufferSize == 0 {
 			rb, err = randomBytes(bufferSize)
 			if err != nil {

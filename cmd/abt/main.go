@@ -8,12 +8,12 @@ import (
 )
 
 func main() {
-	ak, sak, err := abt.GenerateKeys()
+	accessKey, sak, err := abt.GenerateKeys()
 	if err != nil {
 		fmt.Println(err) //nolint:forbidigo
 		os.Exit(1)
 	}
 
-	fmt.Println("Access key:", ak)         //nolint:forbidigo
+	fmt.Println("Access key:", accessKey)  //nolint:forbidigo
 	fmt.Println("Secret access key:", sak) //nolint:forbidigo
 }
