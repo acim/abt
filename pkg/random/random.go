@@ -1,3 +1,4 @@
+// Package random contains various functions to generate random based output.
 package random
 
 import (
